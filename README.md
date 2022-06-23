@@ -82,10 +82,10 @@ test('test that App component renders Task', () => {
   fireEvent.change(inputDate, { target: { value: dueDate}});
   fireEvent.click(element);
   const check = screen.getByText(/History Test/i);
-  const checkDate = screen.getByText(new RegExp(dueDate, "i"));
   expect(check).toBeInTheDocument();
+  const checkDate = screen.getByText(new RegExp(dueDate, "i"));
   expect(checkDate).toBeInTheDocument();
- });
+ });r
 
 ```
 + `render(<App />);` mocks the compentent so that we can do the testing
